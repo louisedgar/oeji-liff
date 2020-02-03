@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
+import Soal from "./pages/Soal";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Oeji-LIFF</h1>
+    <div>
+      <Soal />
     </div>
   );
 }

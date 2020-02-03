@@ -1,0 +1,39 @@
+.soal-page {
+  background-image: url("../assets/bg.svg");
+  height: 100vh;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+
+.section-a {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  /* border: 1px black solid; */
+}
+
+/* header {
+  top: 50px;
+  position: relative;
+  margin: 0 auto;
+} */
+
+.section-a h1 {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+
+  line-height: 1;
+}
+
+.section-a p {
+  font-weight: lighter;
+  font-size: 12px;
+  color: white;
+}
+
+.section-b {
+  height: 65vh;
+}
