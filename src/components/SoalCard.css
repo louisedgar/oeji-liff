@@ -1,0 +1,12 @@
+.sub-title {
+  color: #0074e1;
+  font-weight: bolder;
+}
+
+.question {
+  margin: 20px;
+}
+
+.choice {
+  max-width: 80%;
+}

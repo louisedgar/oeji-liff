@@ -22,18 +22,17 @@
 
 .section-a h1 {
   font-size: 16px;
-  font-weight: bold;
   color: white;
-
+  letter-spacing: 1px;
   line-height: 1;
 }
 
 .section-a p {
   font-weight: lighter;
-  font-size: 12px;
+  font-size: 14px;
   color: white;
 }
 
-.section-b {
+/* .section-b {
   height: 65vh;
-}
+} */

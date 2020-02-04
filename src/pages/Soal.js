@@ -9,10 +9,14 @@ class Soal extends Component {
     return (
       <div className="soal-page">
         <div className="section-a">
-          <div>
-            <h1 className="title">Soal UTBK Tahun 2018</h1>
+          <div className="title">
+            <h1>Soal UTBK Tahun 2018</h1>
             <p>SAINTEK</p>
+          </div>
+          <div className="menu">
             <Menu />
+          </div>
+          <div className="progress">
             <ProgressBar />
           </div>
         </div>

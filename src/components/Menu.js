@@ -23,13 +23,9 @@ function Menu() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Paper elevation={3}>Jenis Soal</Paper>
-      <Paper elevation={3}>
-        <AccessTimeIcon />
-      </Paper>
-      <Paper elevation={3}>
-        <AppsIcon />
-      </Paper>
+      <Paper elevation={3} />
+      <Paper elevation={3} />
+      <Paper elevation={3} />
     </div>
   );
 }
