@@ -9,7 +9,7 @@ import "./SoalCard.css";
 const useStyles = makeStyles({
   root: {
     width: "100%",
-    height: "70vh",
+    minHeight: "70vh",
     borderRadius: "25px 25px 0 0",
     fontSize: "12px"
   }
