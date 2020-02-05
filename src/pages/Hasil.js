@@ -8,9 +8,7 @@ class Hasil extends Component {
     return (
       <CssBaseline>
         <div className="hasil-page">
-          <div className="hasil-card">
-            <HasilCard />
-          </div>
+          <HasilCard />
         </div>
       </CssBaseline>
     );

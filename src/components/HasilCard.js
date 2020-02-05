@@ -5,23 +5,44 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import CardMedia from "@material-ui/core/CardMedia";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import "./HasilCard.css";
+import Decoration from "../assets/decoration.svg";
+import Check from "@material-ui/icons/Check";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#0074e1"
+    },
+    secondary: {
+      main: "#fccd04"
+    }
+  }
+});
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 275,
-    minHeight: "50vh",
-    textAlign: "center"
+    width: "80%",
+    minHeight: "60%",
+    textAlign: "center",
+    margin: "0 auto"
   },
 
   title: {
-    fontSize: 14
+    fontSize: "16px",
+    fontWeight: "bolder",
+    letterSpacing: "1px",
+    lineHheight: 1,
+    margin: "10px"
   },
-  pos: {
-    marginBottom: 12
-  },
-  media: {
-    height: 100
+
+  button: {
+    paddingLeft: "20px",
+    paddingRight: "20px",
+    margin: "20px 0",
+    textAlign: "center",
+    width: "100 %"
   }
 });
 
@@ -29,32 +50,47 @@ export default function HasilCard() {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <CardContent>
-        <CardMedia
-          className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="Contemplative Reptile"
-        />
-        <Typography variant="h5" component="h1">
-          Ujian Selesai
-        </Typography>
-        <Typography variant="body2" component="p">
-          40 daari 50 soal berhasil kamu jawab dengan benar. Terus tingkatkan!
-        </Typography>
-      </CardContent>
-      <div className="">
-        <CardActions>
-          <Button size="large" variant="outlined">
-            Dashboard
-          </Button>
-        </CardActions>
-        <CardActions>
-          <Button size="large" variant="outlined">
-            Keluar
-          </Button>
-        </CardActions>
-      </div>
-    </Card>
+    <ThemeProvider theme={theme}>
+      <Card className={classes.root}>
+        <div className="hasil-card-decor">
+          <img src={Decoration}></img>
+        </div>
+        <CardContent>
+          <div>
+            <div className="hasil-icon">
+              <Check color="secondary" />
+            </div>
+          </div>
+          <Typography component="h1" className={classes.title}>
+            Ujian Selesai
+          </Typography>
+          <Typography variant="body2" component="p">
+            40 dari 50 soal berhasil kamu jawab dengan benar. Terus tingkatkan!
+          </Typography>
+        </CardContent>
+        <div className={classes.button}>
+          <CardActions>
+            <Button
+              className="btn-hasil"
+              size="large"
+              variant="outlined"
+              color="secondary"
+            >
+              <span style={{ fontSize: "10px" }}>Dashboard</span>
+            </Button>
+          </CardActions>
+          <CardActions>
+            <Button
+              className="btn-hasil"
+              size="large"
+              variant="outlined"
+              color="secondary"
+            >
+              <span style={{ fontSize: "10px" }}>Keluar</span>
+            </Button>
+          </CardActions>
+        </div>
+      </Card>
+    </ThemeProvider>
   );
 }

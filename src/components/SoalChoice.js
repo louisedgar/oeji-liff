@@ -21,7 +21,7 @@ export default function SoalChoice() {
       <CardActions>
         <Button
           className="btn"
-          size="medium"
+          size="large"
           variant="outlined"
           color="secondary"
         >
@@ -31,7 +31,7 @@ export default function SoalChoice() {
       <CardActions>
         <Button
           className="btn"
-          size="medium"
+          size="large"
           variant="outlined"
           color="secondary"
         >
@@ -41,7 +41,7 @@ export default function SoalChoice() {
       <CardActions>
         <Button
           className="btn"
-          size="medium"
+          size="large"
           variant="outlined"
           color="secondary"
         >
@@ -51,7 +51,7 @@ export default function SoalChoice() {
       <CardActions>
         <Button
           className="btn"
-          size="medium"
+          size="large"
           variant="outlined"
           color="secondary"
         >
@@ -61,7 +61,7 @@ export default function SoalChoice() {
       <CardActions>
         <Button
           className="btn"
-          size="medium"
+          size="large"
           variant="outlined"
           color="secondary"
         >
