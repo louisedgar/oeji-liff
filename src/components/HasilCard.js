@@ -26,7 +26,8 @@ const useStyles = makeStyles({
     width: "80%",
     minHeight: "60%",
     textAlign: "center",
-    margin: "0 auto"
+    margin: "0 auto",
+    borderRadius: "25px"
   },
 
   title: {
