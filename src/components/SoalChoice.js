@@ -1,17 +1,73 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
 import "./SoalChoice.css";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#0074e1"
+    },
+    secondary: {
+      main: "#fccd04"
+    }
+  }
+});
 
 export default function SoalChoice() {
   return (
-    <CardActions>
-      <Button className="btn" size="large" variant="outlined">
-        Learn More
-      </Button>
-    </CardActions>
+    <ThemeProvider theme={theme}>
+      <CardActions>
+        <Button
+          className="btn"
+          size="medium"
+          variant="outlined"
+          color="secondary"
+        >
+          <span style={{ color: "black", fontSize: "10px" }}>Learn More</span>
+        </Button>
+      </CardActions>
+      <CardActions>
+        <Button
+          className="btn"
+          size="medium"
+          variant="outlined"
+          color="secondary"
+        >
+          <span style={{ color: "black", fontSize: "10px" }}>Learn More</span>
+        </Button>
+      </CardActions>
+      <CardActions>
+        <Button
+          className="btn"
+          size="medium"
+          variant="outlined"
+          color="secondary"
+        >
+          <span style={{ color: "black", fontSize: "10px" }}>Learn More</span>
+        </Button>
+      </CardActions>
+      <CardActions>
+        <Button
+          className="btn"
+          size="medium"
+          variant="outlined"
+          color="secondary"
+        >
+          <span style={{ color: "black", fontSize: "10px" }}>Learn More</span>
+        </Button>
+      </CardActions>
+      <CardActions>
+        <Button
+          className="btn"
+          size="medium"
+          variant="outlined"
+          color="secondary"
+        >
+          <span style={{ color: "black", fontSize: "10px" }}>Learn More</span>
+        </Button>
+      </CardActions>
+    </ThemeProvider>
   );
 }

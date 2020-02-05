@@ -9,16 +9,9 @@
   height: 30vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   text-align: center;
-  /* border: 1px black solid; */
 }
-
-/* header {
-  top: 50px;
-  position: relative;
-  margin: 0 auto;
-} */
 
 .section-a h1 {
   font-size: 16px;
@@ -33,6 +26,7 @@
   color: white;
 }
 
-/* .section-b {
-  height: 65vh;
-} */
+.progress {
+  width: 80%;
+  align-self: center;
+}

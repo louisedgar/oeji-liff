@@ -1,0 +1,12 @@
+.hasil-page {
+  background-image: url("../assets/bg.svg");
+  height: 100vh;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+
+.hasil-card {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+}
