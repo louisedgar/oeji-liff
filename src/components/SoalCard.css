@@ -1,0 +1,18 @@
+.sub-title {
+  color: #0074e1;
+  font-weight: bolder;
+  padding-left: 10px;
+}
+
+.question {
+  margin: 20px;
+}
+
+.choice {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: left;
+}
