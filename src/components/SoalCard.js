@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   }
 });
 
-function SoalCard() {
+function SoalCard(props) {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
@@ -41,7 +41,10 @@ function SoalCard() {
         </div>
       </CardContent>
       <div className="choice">
-        <SoalChoice />
+        <span style={{ color: "grey" }}>PILIH JAWABAN</span>
+        <div className="choice-list">
+          <SoalChoice handleChoice={props.handleChoice} />
+        </div>
       </div>
     </Card>
   );

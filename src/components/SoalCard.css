@@ -9,10 +9,15 @@
 }
 
 .choice {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto 30px;
+  /* display: flex;
+  flex-direction: column; */
+  /* margin: 0 auto 30px; */
   padding-left: 30px;
   padding-right: 30px;
   text-align: left;
+  margin-top: 10px;
+}
+
+.choice-list {
+  margin: 20px 0 30px;
 }
