@@ -6,6 +6,10 @@ import SoalCard from "../components/SoalCard";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 class Soal extends Component {
+  handleChoice = () => {
+    console.log("halo dari button");
+  };
+
   render() {
     return (
       <CssBaseline>
@@ -23,7 +27,7 @@ class Soal extends Component {
             </div>
           </div>
           <div className="section-b">
-            <SoalCard />
+            <SoalCard handleChoice={this.handleChoice} />
           </div>
         </div>
       </CssBaseline>
