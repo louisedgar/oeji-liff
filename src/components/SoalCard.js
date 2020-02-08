@@ -10,7 +10,7 @@ const useStyles = makeStyles({
   root: {
     width: "100%",
     minHeight: "70vh",
-    borderRadius: "25px 25px 0 0",
+    borderRadius: "15px 15px 0 0",
     fontSize: "12px"
   }
 });

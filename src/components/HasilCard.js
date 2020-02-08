@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     minHeight: "60%",
     textAlign: "center",
     margin: "0 auto",
-    borderRadius: "25px"
+    borderRadius: "15px"
   },
 
   title: {
@@ -57,11 +57,24 @@ export default function HasilCard() {
           <img src={Decoration}></img>
         </div>
         <CardContent>
-          <div>
-            <div className="hasil-icon">
-              <Check color="secondary" />
-            </div>
+          <div
+            className="hasil-icon"
+            style={{
+              width: "90px",
+              height: "90px",
+              alignItems: "center"
+            }}
+          >
+            <Check
+              color="secondary"
+              style={{
+                width: "50px",
+                height: "50px",
+                margin: "20px auto" // Important: centering the icon
+              }}
+            />
           </div>
+
           <Typography component="h1" className={classes.title}>
             Ujian Selesai
           </Typography>
