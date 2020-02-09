@@ -20,5 +20,3 @@ class RightArrowSwap extends Component {
   }
 }
 export default RightArrowSwap;
-
-

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Lottie from "react-lottie";
-import rightArrow from "../assets/11515-swipe-right-arrows.json";
 import animationData from "../assets/11516-swipe-left-arrows.json";
 
 class LeftArrowSwap extends Component {
