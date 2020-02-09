@@ -25,6 +25,7 @@ export default function SoalChoice(props) {
           size="large"
           variant="outlined"
           color="secondary"
+          style={{ margin: "5px 0", justifyContent: "left" }}
         >
           <span style={{ marginRight: "10px" }}>A</span>
           <div>
@@ -37,10 +38,9 @@ export default function SoalChoice(props) {
                 marginLeft: "5px"
               }}
             >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id ipsum
-              aperiam deserunt laborum? Tenetur enim obcaecati minima quod,
-              quis, nemo, natus sit facere atque harum nihil mollitia! Magnam,
-              cum labore?
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Explicabo laborum perspiciatis accusamus exercitationem tempore
+              illum laboriosam alias quam et ratione.
             </Typography>
           </div>
         </Button>
@@ -51,6 +51,7 @@ export default function SoalChoice(props) {
           size="large"
           variant="outlined"
           color="secondary"
+          style={{ margin: "5px 0", justifyContent: "left" }}
         >
           <span style={{ marginRight: "10px" }}>B</span>
           <div>
@@ -63,8 +64,7 @@ export default function SoalChoice(props) {
                 marginLeft: "5px"
               }}
             >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid
-              voluptates non quibusdam sequi similique ea!
+              Lorem
             </Typography>
           </div>
         </Button>
@@ -75,6 +75,10 @@ export default function SoalChoice(props) {
           size="large"
           variant="outlined"
           color="secondary"
+          style={{
+            margin: "5px 0",
+            justifyContent: "left"
+          }}
         >
           <span style={{ marginRight: "10px" }}>C</span>
           <div>
@@ -87,9 +91,7 @@ export default function SoalChoice(props) {
                 marginLeft: "5px"
               }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-              placeat ipsum cum quod ab modi dignissimos deleniti impedit.
-              Tenetur, officiis!
+              Lorem
             </Typography>
           </div>
         </Button>
@@ -100,6 +102,7 @@ export default function SoalChoice(props) {
           size="large"
           variant="outlined"
           color="secondary"
+          style={{ margin: "5px 0", justifyContent: "left" }}
         >
           <span style={{ marginRight: "10px" }}>D</span>
           <div>
@@ -112,8 +115,7 @@ export default function SoalChoice(props) {
                 marginLeft: "5px"
               }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
-              dolore!
+              Lorem
             </Typography>
           </div>
         </Button>
@@ -124,6 +126,7 @@ export default function SoalChoice(props) {
           size="large"
           variant="outlined"
           color="secondary"
+          style={{ margin: "5px 0", justifyContent: "left" }}
         >
           <span style={{ marginRight: "10px" }}>E</span>
           <div>
@@ -136,9 +139,7 @@ export default function SoalChoice(props) {
                 marginLeft: "5px"
               }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-              voluptas vel repellat repellendus cumque, voluptatem dicta? Id,
-              quae.
+              Lorem ipsum
             </Typography>
           </div>
         </Button>
