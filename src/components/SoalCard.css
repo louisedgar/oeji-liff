@@ -21,3 +21,9 @@
 .choice-list {
   margin: 20px 0 30px;
 }
+
+.swap-arrow {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}

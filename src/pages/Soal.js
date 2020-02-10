@@ -3,7 +3,9 @@ import "./Soal.css";
 import Menu from "../components/Menu";
 import ProgressBar from "../components/ProgressBar";
 import SoalCard from "../components/SoalCard";
+import SoalCardTwo from "../components/SoalCardTwo";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import Carousel from "../components/Carousel";
 
 class Soal extends Component {
   handleChoice = () => {
@@ -26,9 +28,15 @@ class Soal extends Component {
               <ProgressBar />
             </div>
           </div>
-          <div className="section-b">
-            <SoalCard handleChoice={this.handleChoice} />
-          </div>
+
+          <Carousel>
+            <div style={{ height: "100%" }}>
+              <SoalCard handleChoice={this.handleChoice} />
+            </div>
+            <div style={{ height: "100%" }}>
+              <SoalCardTwo handleChoice={this.handleChoice} />
+            </div>
+          </Carousel>
         </div>
       </CssBaseline>
     );

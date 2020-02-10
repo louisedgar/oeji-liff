@@ -14,12 +14,11 @@ const useStyles = makeStyles({
     height: "100%",
     overflow: "auto",
     borderRadius: "15px 15px 0 0",
-    fontSize: "12px",
-    textAlign: "left,"
+    fontSize: "12px"
   }
 });
 
-function SoalCard(props) {
+function SoalCardTwo(props) {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
@@ -37,21 +36,15 @@ function SoalCard(props) {
         </Typography>
         <div className="question">
           <Typography variant="body2" component="p" className={classes.body}>
-            Siapa namamu?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+            repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Laborum, necessitatibus. Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Obcaecati, explicabo?
           </Typography>
         </div>
       </CardContent>
       <div className="choice">
-        <span
-          style={{
-            color: "#0074e1",
-            fontWeight: "bolder",
-            fontSize: "12px",
-            letterSpacing: "1px"
-          }}
-        >
-          PILIH JAWABAN
-        </span>
+        <span style={{ color: "#0074e1" }}>PILIH JAWABAN</span>
         <div className="choice-list">
           <SoalChoice handleChoice={props.handleChoice} />
         </div>
@@ -64,4 +57,4 @@ function SoalCard(props) {
   );
 }
 
-export default SoalCard;
+export default SoalCardTwo;
