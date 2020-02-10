@@ -2,11 +2,11 @@ import React, { Component } from "react";
 
 class Timer extends Component {
   state = {
-    minutes: 30,
+    minutes: 10,
     seconds: 0
   };
   style = {
-    color: this.state.minutes < 15 ? "#f00" : "#15db95"
+    color: this.state.minutes < 15 ? "#ff0000" : "#2adb15"
   };
 
   componentDidMount() {

@@ -6,6 +6,7 @@ import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import Timer from "./Timer";
+import ButtonRow from "./ButtonRow";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -17,12 +18,12 @@ const useStyles = makeStyles(theme => ({
       height: theme.spacing(6)
     },
     justifyContent: "center",
-    opacity: 0.7
+    opacity: 0.8
   },
   paper: {
     padding: theme.spacing(2),
     textAlign: "center",
-    fontWeight: "bold"
+    fontWeight: "900"
   },
   paperIcon: {
     padding: theme.spacing(1),
@@ -35,9 +36,14 @@ const useStyles = makeStyles(theme => ({
   },
   paperModal: {
     backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3)
+    // boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+    width: "70%",
+    height: "90%",
+    borderRadius: "15px",
+    borderStyle: "none",
+    border: "none",
+    outline: "none"
   }
 }));
 
@@ -77,8 +83,9 @@ function Menu() {
       >
         <Fade in={open}>
           <div className={classes.paperModal}>
-            <h2 id="transition-modal-title">Daftar Soal</h2>
-            <p id="transition-modal-description">Disini daftar soal</p>
+            <div>
+              <ButtonRow />
+            </div>
           </div>
         </Fade>
       </Modal>

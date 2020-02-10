@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Lottie from "react-lottie";
-import animationData from "../assets/11516-swipe-left-arrows.json";
+import animationData from "../assets/arrow-left.json";
 
 class LeftArrowSwap extends Component {
   state = {
@@ -17,14 +17,12 @@ class LeftArrowSwap extends Component {
       }
     };
     return (
-      <div>
-        <Lottie
-          options={defaultOptions}
-          isStopped={this.state.isStopped}
-          isPaused={this.state.isPaused}
-          height={50}
-          width={50}
-        />
+      <div
+        onClick={() => {
+          this.setState({ isStopped: false, isPaused: false });
+        }}
+      >
+        <Lottie options={defaultOptions} height={50} width={50} />
       </div>
     );
   }

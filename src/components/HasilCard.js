@@ -54,7 +54,7 @@ export default function HasilCard() {
     <ThemeProvider theme={theme}>
       <Card className={classes.root}>
         <div className="hasil-card-decor">
-          <img src={Decoration}></img>
+          <img src={Decoration} alt=""></img>
         </div>
         <CardContent>
           <div

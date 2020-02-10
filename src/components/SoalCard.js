@@ -42,7 +42,16 @@ function SoalCard(props) {
         </div>
       </CardContent>
       <div className="choice">
-        <span style={{ color: "#0074e1" }}>PILIH JAWABAN</span>
+        <span
+          style={{
+            color: "#0074e1",
+            fontWeight: "bolder",
+            fontSize: "12px",
+            letterSpacing: "1px"
+          }}
+        >
+          PILIH JAWABAN
+        </span>
         <div className="choice-list">
           <SoalChoice handleChoice={props.handleChoice} />
         </div>
