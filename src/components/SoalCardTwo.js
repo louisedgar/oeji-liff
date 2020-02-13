@@ -36,10 +36,32 @@ function SoalCardTwo(props) {
         </Typography>
         <div className="question">
           <Typography variant="body2" component="p" className={classes.body}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
-            repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Laborum, necessitatibus. Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Obcaecati, explicabo?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
+            enim, aperiam hic id atque quasi? Temporibus, perspiciatis. Laborum
+            ea cumque alias facere, suscipit temporibus iusto sed officiis
+            quibusdam autem ipsum, accusamus aliquam a ex quisquam amet
+            excepturi ut voluptatum consectetur cupiditate, minus quis iste non!
+            Rem debitis voluptate nemo eius illo ad earum impedit. Molestias,
+            odio. Enim autem, consequuntur ducimus, ratione odio dolore, minima
+            illum amet odit assumenda non quam? Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Voluptatum quaerat consequuntur quo
+            consequatur nam hic quod minima numquam nisi. Doloribus esse
+            expedita dolore, veniam possimus distinctio dolores architecto,
+            voluptatem eius voluptates, provident ea eos suscipit quisquam
+            excepturi porro. Libero eum consectetur recusandae quas? Laboriosam
+            perspiciatis, dolor eos modi impedit ea provident quae fugit
+            repellat id quasi natus, placeat laudantium voluptate explicabo!
+            Deleniti consequuntur sint beatae commodi necessitatibus recusandae
+            rem ratione.
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque optio
+            sunt corporis vitae quia sit ipsum hic temporibus nulla pariatur,
+            doloremque modi qui delectus necessitatibus eligendi. Consectetur a
+            incidunt atque nesciunt reprehenderit excepturi quas adipisci quae
+            maxime dolores odio earum, numquam cupiditate nulla iusto aliquam,
+            eaque placeat ad! Vitae delectus quae eum eius adipisci deserunt
+            sequi ipsa totam aspernatur, excepturi cum ad, nesciunt ipsam
+            reiciendis ducimus? Cumque ducimus nemo rem?
           </Typography>
         </div>
       </CardContent>

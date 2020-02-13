@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./ButtonRow.css";
 
 class ButtonRow extends Component {
   render() {
@@ -67,7 +68,7 @@ class ButtonRow extends Component {
               className="buttonRow"
               style={{
                 width: "100%",
-                margin: "10px 0",
+                margin: "5px 0",
                 display: "flex",
                 justifyContent: "space-evenly"
               }}
@@ -77,11 +78,11 @@ class ButtonRow extends Component {
                 return (
                   <button
                     style={{
-                      height: "40px",
-                      width: "40px",
+                      height: "30px",
+                      width: "30px",
                       margin: "5px",
-                      backgroundColor: "white",
-                      borderColor: "#fccd04",
+                      backgroundColor: "#fff3c2",
+                      borderColor: "#fff3c2",
                       borderRadius: "5px",
                       color: "grey",
                       borderStyle: "solid"

@@ -25,7 +25,10 @@ export default function SoalChoice(props) {
           size="large"
           variant="outlined"
           color="secondary"
-          style={{ margin: "5px 0", justifyContent: "left" }}
+          style={{
+            margin: "5px 0",
+            justifyContent: "left"
+          }}
         >
           <span style={{ marginRight: "10px" }}>A</span>
           <div>
@@ -35,7 +38,8 @@ export default function SoalChoice(props) {
               component="p"
               style={{
                 textTransform: "none",
-                marginLeft: "5px"
+                marginLeft: "5px",
+                textShadow: "none"
               }}
             >
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.

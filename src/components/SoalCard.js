@@ -37,7 +37,10 @@ function SoalCard(props) {
         </Typography>
         <div className="question">
           <Typography variant="body2" component="p" className={classes.body}>
-            Siapa namamu?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
+            quasi molestias veniam ex aspernatur illum eaque natus quae? Error
+            quos placeat ducimus at repudiandae. Ipsa nemo debitis possimus
+            facere sequi?
           </Typography>
         </div>
       </CardContent>
