@@ -23,17 +23,23 @@ export default function SoalChoice(props) {
       <ThemeProvider theme={theme} key={index}>
         <CardActions
           key={index}
-          onClick={() => props.handleChoice(choice.value, props.questionIndex)}
+          onClick={() =>
+            props.handleChoice(choice.value, props.questionIndex, index)
+          }
         >
           <Button
-            className="btn"
             size="large"
-            variant="outlined"
+            variant={
+              props.questionCard.isActive === index ? "contained" : "outlined"
+            }
             color="secondary"
             style={{
               margin: "5px 0",
-              justifyContent: "left"
+              justifyContent: "left",
+              textAlign: "left",
+              width: "100%"
             }}
+            disableRipple={true}
           >
             <span style={{ marginRight: "10px" }} key={index}>
               {choicesLetter[index]}

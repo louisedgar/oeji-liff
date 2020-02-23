@@ -5,16 +5,16 @@ import ProgressBar from "../components/ProgressBar";
 import SoalCard from "../components/SoalCard";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Carousel from "../components/Carousel";
-// import SoalCard2 from "../components/SoalCard2";
 
 class Soal extends Component {
   state = {
     questions: [],
     questionCard: {
       soal: "",
-      pilihan: [{ a: "" }, { b: "" }, { c: "" }, { d: "" }, { e: "" }]
+      pilihan: [{ a: "" }, { b: "" }, { c: "" }, { d: "" }, { e: "" }],
+      isActive: ""
     },
-    score: [false, false, false, false, false]
+    score: []
   };
 
   setQuestion = id => {
@@ -24,9 +24,7 @@ class Soal extends Component {
     });
   };
 
-  handleChoice = (value, id) => {
-    console.log("halo dari button", value, this.state.score[id]);
-
+  setScore = (value, id) => {
     this.setState(prevState => {
       const newState = prevState.score.map((val, ind) => {
         if (ind === id) {
@@ -36,7 +34,22 @@ class Soal extends Component {
       });
       return { score: newState };
     });
-    console.log(this.state.score);
+  };
+
+  setActive = index => {
+    this.setState(prevState => {
+      return {
+        questionCard: {
+          ...prevState,
+          isActive: index
+        }
+      };
+    });
+  };
+
+  handleChoice = (value, id, index) => {
+    this.setActive(index);
+    this.setScore(value, id);
   };
 
   getQuestion = async () => {
@@ -47,12 +60,14 @@ class Soal extends Component {
     const data = await res.json();
 
     const { choices } = data[0];
+    const scoreValue = data.map(() => false);
     this.setState({
       questions: data,
       questionCard: {
         soal: data[0].text,
         pilihan: choices
-      }
+      },
+      score: scoreValue
     });
   };
 
@@ -61,14 +76,13 @@ class Soal extends Component {
   }
 
   render() {
-    console.log("score", this.state.score);
-    console.log("questions", this.state.questions);
     const soalCard = this.state.questions.map((question, index) => (
       <div style={{ height: "100%" }} key={question["_id"]}>
         <SoalCard
           handleChoice={this.handleChoice}
-          questionCard={question}
+          question={question}
           questionIndex={index}
+          questionCard={this.state.questionCard}
         />
       </div>
     ));
