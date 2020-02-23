@@ -37,10 +37,7 @@ function SoalCard(props) {
         </Typography>
         <div className="question">
           <Typography variant="body2" component="p" className={classes.body}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-            quasi molestias veniam ex aspernatur illum eaque natus quae? Error
-            quos placeat ducimus at repudiandae. Ipsa nemo debitis possimus
-            facere sequi?
+            {props.questionCard.text}
           </Typography>
         </div>
       </CardContent>
@@ -56,7 +53,11 @@ function SoalCard(props) {
           PILIH JAWABAN
         </span>
         <div className="choice-list">
-          <SoalChoice handleChoice={props.handleChoice} />
+          <SoalChoice
+            handleChoice={props.handleChoice}
+            questionChoice={props.questionCard}
+            questionIndex={props.questionIndex}
+          />
         </div>
       </div>
       <div className="swap-arrow">

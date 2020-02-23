@@ -3,59 +3,7 @@ import "./ButtonRow.css";
 
 class ButtonRow extends Component {
   render() {
-    const dataAPI = [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15,
-      16,
-      17,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23,
-      24,
-      25,
-      26,
-      27,
-      28,
-      29,
-      30,
-      31,
-      32,
-      33,
-      34,
-      35,
-      36,
-      37,
-      38,
-      39,
-      40,
-      41,
-      42,
-      43,
-      44,
-      45,
-      46,
-      47,
-      48,
-      49,
-      50
-    ];
-    const rowAmount = Math.ceil(dataAPI.length / 5);
+    const rowAmount = Math.ceil(this.props.questions.length / 5);
     const buttonRows = [];
     for (let i = 0; i < rowAmount; i++) {
       buttonRows.push(i);
@@ -74,25 +22,28 @@ class ButtonRow extends Component {
               }}
               key={index}
             >
-              {dataAPI.slice(index * 5, index * 5 + 5).map(btn => {
-                return (
-                  <button
-                    style={{
-                      height: "30px",
-                      width: "30px",
-                      margin: "5px",
-                      backgroundColor: "#fff3c2",
-                      borderColor: "#fff3c2",
-                      borderRadius: "5px",
-                      color: "grey",
-                      borderStyle: "solid"
-                    }}
-                    key={btn}
-                  >
-                    {btn}
-                  </button>
-                );
-              })}
+              {this.props.questions
+                .slice(index * 5, index * 5 + 5)
+                .map((btn, index) => {
+                  return (
+                    <button
+                      style={{
+                        height: "30px",
+                        width: "30px",
+                        margin: "5px",
+                        backgroundColor: "#fff3c2",
+                        borderColor: "#fff3c2",
+                        borderRadius: "5px",
+                        color: "grey",
+                        borderStyle: "solid"
+                      }}
+                      key={btn["_id"]}
+                      onClick={() => this.props.setQuestion(btn._id)}
+                    >
+                      {index + 1}
+                    </button>
+                  );
+                })}
             </div>
           );
         })}
