@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function Menu() {
+function Menu(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -84,7 +84,10 @@ function Menu() {
         <Fade in={open}>
           <div className={classes.paperModal}>
             <div>
-              <ButtonRow />
+              <ButtonRow
+                setQuestion={props.setQuestion}
+                questions={props.questions}
+              />
             </div>
           </div>
         </Fade>

@@ -17,137 +17,52 @@ const theme = createMuiTheme({
 });
 
 export default function SoalChoice(props) {
-  return (
-    <ThemeProvider theme={theme}>
-      <CardActions onClick={props.handleChoice}>
-        <Button
-          className="btn"
-          size="large"
-          variant="outlined"
-          color="secondary"
-          style={{
-            margin: "5px 0",
-            justifyContent: "left"
-          }}
+  const choicesLetter = ["A", "B", "C", "D", "E"];
+  const choices = props.questionChoice.choices.map((choice, index) => {
+    return (
+      <ThemeProvider theme={theme} key={index}>
+        <CardActions
+          key={index}
+          onClick={() =>
+            props.handleChoice(choice.value, props.questionIndex, index)
+          }
         >
-          <span style={{ marginRight: "10px" }}>A</span>
-          <div>
-            <Typography
-              variant="body2"
-              color="textSecondary"
-              component="p"
-              style={{
-                textTransform: "none",
-                marginLeft: "5px",
-                textShadow: "none"
-              }}
-            >
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Explicabo laborum perspiciatis accusamus exercitationem tempore
-              illum laboriosam alias quam et ratione.
-            </Typography>
-          </div>
-        </Button>
-      </CardActions>
-      <CardActions>
-        <Button
-          className="btn"
-          size="large"
-          variant="outlined"
-          color="secondary"
-          style={{ margin: "5px 0", justifyContent: "left" }}
-        >
-          <span style={{ marginRight: "10px" }}>B</span>
-          <div>
-            <Typography
-              variant="body2"
-              color="textSecondary"
-              component="p"
-              style={{
-                textTransform: "none",
-                marginLeft: "5px"
-              }}
-            >
-              Lorem
-            </Typography>
-          </div>
-        </Button>
-      </CardActions>
-      <CardActions>
-        <Button
-          className="btn"
-          size="large"
-          variant="outlined"
-          color="secondary"
-          style={{
-            margin: "5px 0",
-            justifyContent: "left"
-          }}
-        >
-          <span style={{ marginRight: "10px" }}>C</span>
-          <div>
-            <Typography
-              variant="body2"
-              color="textSecondary"
-              component="p"
-              style={{
-                textTransform: "none",
-                marginLeft: "5px"
-              }}
-            >
-              Lorem
-            </Typography>
-          </div>
-        </Button>
-      </CardActions>
-      <CardActions>
-        <Button
-          className="btn"
-          size="large"
-          variant="outlined"
-          color="secondary"
-          style={{ margin: "5px 0", justifyContent: "left" }}
-        >
-          <span style={{ marginRight: "10px" }}>D</span>
-          <div>
-            <Typography
-              variant="body2"
-              color="textSecondary"
-              component="p"
-              style={{
-                textTransform: "none",
-                marginLeft: "5px"
-              }}
-            >
-              Lorem
-            </Typography>
-          </div>
-        </Button>
-      </CardActions>
-      <CardActions>
-        <Button
-          className="btn"
-          size="large"
-          variant="outlined"
-          color="secondary"
-          style={{ margin: "5px 0", justifyContent: "left" }}
-        >
-          <span style={{ marginRight: "10px" }}>E</span>
-          <div>
-            <Typography
-              variant="body2"
-              color="textSecondary"
-              component="p"
-              style={{
-                textTransform: "none",
-                marginLeft: "5px"
-              }}
-            >
-              Lorem ipsum
-            </Typography>
-          </div>
-        </Button>
-      </CardActions>
-    </ThemeProvider>
-  );
+          <Button
+            size="large"
+            variant={
+              props.questionChoice.isActive === index ? "contained" : "outlined"
+            }
+            color="secondary"
+            style={{
+              margin: "5px 0",
+              justifyContent: "left",
+              textAlign: "left",
+              width: "100%"
+            }}
+            disableRipple={true}
+          >
+            <span style={{ marginRight: "10px" }} key={index}>
+              {choicesLetter[index]}
+            </span>
+            <div>
+              <Typography
+                variant="body2"
+                color="textSecondary"
+                component="p"
+                style={{
+                  textTransform: "none",
+                  marginLeft: "5px",
+                  textShadow: "none"
+                }}
+                key={index}
+              >
+                {choice.text}
+              </Typography>
+            </div>
+          </Button>
+        </CardActions>
+      </ThemeProvider>
+    );
+  });
+  return <div>{choices}</div>;
 }

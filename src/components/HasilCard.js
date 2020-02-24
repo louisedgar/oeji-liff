@@ -90,17 +90,12 @@ export default function HasilCard() {
               variant="outlined"
               color="secondary"
             >
-              <span style={{ fontSize: "10px" }}>Dashboard</span>
+              <span style={{ fontSize: "12px" }}>Dashboard</span>
             </Button>
           </CardActions>
           <CardActions>
-            <Button
-              className="btn-hasil"
-              size="large"
-              variant="outlined"
-              color="secondary"
-            >
-              <span style={{ fontSize: "10px" }}>Keluar</span>
+            <Button className="btn-hasil" size="large" variant="outlined">
+              <span style={{ fontSize: "12px" }}>Keluar</span>
             </Button>
           </CardActions>
         </div>
