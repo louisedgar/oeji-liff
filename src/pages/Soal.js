@@ -13,7 +13,8 @@ class Soal extends Component {
       soal: "",
       pilihan: [{ a: "" }, { b: "" }, { c: "" }, { d: "" }, { e: "" }]
     },
-    score: []
+    score: [],
+    progress: 0
   };
 
   setQuestion = id => {
@@ -48,9 +49,23 @@ class Soal extends Component {
     console.log(this.state.questions);
   };
 
+  setProgress = () => {
+    this.setState(prevState => {
+      let newProgress = 0;
+      for (let i = 0; i < prevState.score.length; i++) {
+        if (prevState.score[i] === true || prevState.score[i] === false) {
+          newProgress += 20;
+        }
+      }
+      return { progress: newProgress };
+    });
+    console.log(this.state.progress);
+  };
+
   handleChoice = (value, id, index) => {
     this.setActive(id, index);
     this.setScore(value, id);
+    this.setProgress();
   };
 
   getQuestion = async () => {
@@ -110,7 +125,7 @@ class Soal extends Component {
               />
             </div>
             <div className="progress">
-              <ProgressBar score={this.state.score} />
+              <ProgressBar progress={this.state.progress} />
             </div>
           </div>
 
