@@ -36,19 +36,24 @@ class Soal extends Component {
     });
   };
 
-  setActive = index => {
+  setActive = (id, index) => {
+    console.log(id, index);
     this.setState(prevState => {
-      return {
-        questionCard: {
-          ...prevState,
-          isActive: index
+      const active = prevState.questions.map((val, ind) => {
+        if (ind === id) {
+          val.isActive = index;
         }
+        return val;
+      });
+      return {
+        questions: active
       };
     });
+    console.log(this.state.questions);
   };
 
   handleChoice = (value, id, index) => {
-    this.setActive(index);
+    this.setActive(id, index);
     this.setScore(value, id);
   };
 
@@ -61,14 +66,21 @@ class Soal extends Component {
 
     const { choices } = data[0];
     const scoreValue = data.map(() => false);
+    const newData = data.map(el => ({
+      ...el,
+      isActive: ""
+    }));
+
     this.setState({
-      questions: data,
+      questions: newData,
       questionCard: {
         soal: data[0].text,
         pilihan: choices
       },
       score: scoreValue
     });
+    console.log(this.state.questions);
+    console.log(this.state.questionCard);
   };
 
   componentDidMount() {
