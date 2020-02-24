@@ -61,7 +61,7 @@ class Soal extends Component {
     const data = await res.json();
 
     const { choices } = data[0];
-    const scoreValue = data.map(() => false);
+    const scoreValue = data.map(() => "");
     const newData = data.map(el => ({
       ...el,
       isActive: ""
@@ -76,7 +76,7 @@ class Soal extends Component {
       score: scoreValue
     });
     console.log(this.state.questions);
-    console.log(this.state.questionCard);
+    console.log(this.state.score);
   };
 
   componentDidMount() {
@@ -84,6 +84,7 @@ class Soal extends Component {
   }
 
   render() {
+    console.log(this.state.score);
     const soalCard = this.state.questions.map((question, index) => (
       <div style={{ height: "100%" }} key={question["_id"]}>
         <SoalCard
@@ -109,7 +110,7 @@ class Soal extends Component {
               />
             </div>
             <div className="progress">
-              <ProgressBar />
+              <ProgressBar score={this.state.score} />
             </div>
           </div>
 
