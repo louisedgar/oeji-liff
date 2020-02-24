@@ -30,7 +30,7 @@ export default function SoalChoice(props) {
           <Button
             size="large"
             variant={
-              props.questionCard.isActive === index ? "contained" : "outlined"
+              props.questionChoice.isActive === index ? "contained" : "outlined"
             }
             color="secondary"
             style={{

@@ -11,8 +11,7 @@ class Soal extends Component {
     questions: [],
     questionCard: {
       soal: "",
-      pilihan: [{ a: "" }, { b: "" }, { c: "" }, { d: "" }, { e: "" }],
-      isActive: ""
+      pilihan: [{ a: "" }, { b: "" }, { c: "" }, { d: "" }, { e: "" }]
     },
     score: []
   };
@@ -37,7 +36,6 @@ class Soal extends Component {
   };
 
   setActive = (id, index) => {
-    console.log(id, index);
     this.setState(prevState => {
       const active = prevState.questions.map((val, ind) => {
         if (ind === id) {
@@ -45,9 +43,7 @@ class Soal extends Component {
         }
         return val;
       });
-      return {
-        questions: active
-      };
+      return { questions: active };
     });
     console.log(this.state.questions);
   };
