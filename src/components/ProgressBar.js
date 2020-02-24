@@ -26,15 +26,16 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function ProgressBar() {
+function ProgressBar(props) {
   const classes = useStyles();
+
   return (
     <div className={classes.root}>
       <BorderLinearProgress
         className={classes.margin}
         variant="determinate"
         color="secondary"
-        value={50}
+        value={props.progress}
       />
     </div>
   );
