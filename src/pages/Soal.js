@@ -5,6 +5,8 @@ import ProgressBar from "../components/ProgressBar";
 import SoalCard from "../components/SoalCard";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Carousel from "../components/Carousel";
+import { connect } from "react-redux";
+import { getQuestions } from "../redux/actions/getQuestionsAction";
 
 class Soal extends Component {
   state = {
@@ -18,7 +20,6 @@ class Soal extends Component {
   };
 
   setQuestion = id => {
-    console.log("halo dari button", id);
     this.setState({
       questionCard: this.state.questions._id === id
     });
@@ -46,7 +47,6 @@ class Soal extends Component {
       });
       return { questions: active };
     });
-    console.log(this.state.questions);
   };
 
   setProgress = () => {
@@ -59,7 +59,6 @@ class Soal extends Component {
       }
       return { progress: newProgress };
     });
-    console.log(this.state.progress);
   };
 
   handleChoice = (value, id, index) => {
@@ -68,39 +67,37 @@ class Soal extends Component {
     this.setProgress();
   };
 
-  getQuestion = async () => {
-    const res = await fetch(
-      "https://floating-beyond-69236.herokuapp.com/api/questions"
-    );
+  // getQuestion = async () => {
+  //   const res = await fetch(
+  //     "https://floating-beyond-69236.herokuapp.com/api/questions"
+  //   );
 
-    const data = await res.json();
+  //   const data = await res.json();
 
-    const { choices } = data[0];
-    const scoreValue = data.map(() => "");
-    const newData = data.map(el => ({
-      ...el,
-      isActive: ""
-    }));
+  //   const { choices } = data[0];
+  //   const scoreValue = data.map(() => "");
+  //   const newData = data.map(el => ({
+  //     ...el,
+  //     isActive: ""
+  //   }));
 
-    this.setState({
-      questions: newData,
-      questionCard: {
-        soal: data[0].text,
-        pilihan: choices
-      },
-      score: scoreValue
-    });
-    console.log(this.state.questions);
-    console.log(this.state.score);
-  };
+  //   this.setState({
+  //     questions: newData,
+  //     questionCard: {
+  //       soal: data[0].text,
+  //       pilihan: choices
+  //     },
+  //     score: scoreValue
+  //   });
+  // };
 
   componentDidMount() {
-    this.getQuestion();
+    // this.getQuestion();
+    this.props.getQuestions();
   }
 
   render() {
-    console.log(this.state.score);
-    const soalCard = this.state.questions.map((question, index) => (
+    const soalCard = this.props.questions.questions.map((question, index) => (
       <div style={{ height: "100%" }} key={question["_id"]}>
         <SoalCard
           handleChoice={this.handleChoice}
@@ -136,4 +133,10 @@ class Soal extends Component {
   }
 }
 
-export default Soal;
+const mapStateToProps = state => {
+  return {
+    questions: state.questions
+  };
+};
+
+export default connect(mapStateToProps, { getQuestions })(Soal);
