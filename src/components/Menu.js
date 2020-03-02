@@ -8,6 +8,8 @@ import Fade from "@material-ui/core/Fade";
 import Timer from "./Timer";
 import ButtonRow from "./ButtonRow";
 
+import DoneIcon from "@material-ui/icons/Done";
+
 const useStyles = makeStyles(theme => ({
   root: {
     display: "flex",
@@ -67,7 +69,7 @@ function Menu(props) {
         <Timer />
       </Paper>
       <Paper elevation={3} className={classes.paperIcon} onClick={handleOpen}>
-        <ViewList style={{ width: "35", height: "35" }} />
+        <DoneIcon style={{ width: "30", height: "30", color: "#fccd04" }} />
       </Paper>
       <Modal
         aria-labelledby="transition-modal-title"

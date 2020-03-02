@@ -1,8 +1,9 @@
 import { SET_SCORE } from "../constant/actionTypes";
 
-export function setScore(score) {
+export function setScore(value, id) {
   return {
     type: SET_SCORE,
-    payload: score
+    value,
+    id
   };
 }
