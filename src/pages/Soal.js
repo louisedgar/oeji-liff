@@ -11,8 +11,10 @@ import { setActive } from "../redux/actions/setActiveAction";
 import { setProgress } from "../redux/actions/setProgressAction";
 import { setScore } from "../redux/actions/setScoreAction";
 import { bindActionCreators } from "redux";
+import Loading from "../components/Loading";
 
 class Soal extends Component {
+  _isLoading = true;
   handleChoice = (value, id, index) => {
     this.props.setActive(id, index);
     this.props.setScore(value, id);
@@ -20,6 +22,7 @@ class Soal extends Component {
   };
 
   componentDidMount() {
+    this._isLoading = false;
     this.props.getQuestions();
   }
 

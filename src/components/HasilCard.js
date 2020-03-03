@@ -8,7 +8,9 @@ import Typography from "@material-ui/core/Typography";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import "./HasilCard.css";
 import Decoration from "../assets/decoration.svg";
-import Check from "@material-ui/icons/Check";
+import Done from "./Done";
+
+import Grid from "@material-ui/core/Grid";
 
 const theme = createMuiTheme({
   palette: {
@@ -47,59 +49,53 @@ const useStyles = makeStyles({
   }
 });
 
-export default function HasilCard() {
+export default function HasilCard(props) {
   const classes = useStyles();
-
+  const finalScore = props.score.filter(value => value === true);
   return (
     <ThemeProvider theme={theme}>
-      <Card className={classes.root}>
-        <div className="hasil-card-decor">
-          <img src={Decoration} alt=""></img>
-        </div>
-        <CardContent>
-          <div
-            className="hasil-icon"
-            style={{
-              width: "90px",
-              height: "90px",
-              alignItems: "center"
-            }}
-          >
-            <Check
-              color="secondary"
-              style={{
-                width: "50px",
-                height: "50px",
-                margin: "20px auto" // Important: centering the icon
-              }}
-            />
-          </div>
+      <Grid container>
+        <Grid item style={{ margin: "auto" }}>
+          <Card className={classes.root}>
+            <div className="hasil-card-decor">
+              <img src={Decoration} alt=""></img>
+            </div>
+            <CardContent>
+              <div className="hasil-icon">
+                <Done />
+              </div>
 
-          <Typography component="h1" className={classes.title}>
-            Ujian Selesai
-          </Typography>
-          <Typography variant="body2" component="p">
-            40 dari 50 soal berhasil kamu jawab dengan benar. Terus tingkatkan!
-          </Typography>
-        </CardContent>
-        <div className={classes.button}>
-          <CardActions>
-            <Button
-              className="btn-hasil"
-              size="large"
-              variant="outlined"
-              color="secondary"
-            >
-              <span style={{ fontSize: "12px" }}>Dashboard</span>
-            </Button>
-          </CardActions>
-          <CardActions>
-            <Button className="btn-hasil" size="large" variant="outlined">
-              <span style={{ fontSize: "12px" }}>Keluar</span>
-            </Button>
-          </CardActions>
-        </div>
-      </Card>
+              <Typography component="h1" className={classes.title}>
+                Ujian Selesai
+              </Typography>
+              <Typography variant="body2" component="p">
+                {finalScore.length} dari {props.score.length} soal berhasil kamu
+                jawab dengan benar.{" "}
+                {finalScore.length > 3
+                  ? "Tetap belajar dan pertahankan!"
+                  : "Jangan menyerah. Ayo tingkatkan!"}
+              </Typography>
+            </CardContent>
+            <div className={classes.button}>
+              <CardActions>
+                <Button
+                  className="btn-hasil"
+                  size="large"
+                  variant="outlined"
+                  color="secondary"
+                >
+                  <span style={{ fontSize: "12px" }}>Dashboard</span>
+                </Button>
+              </CardActions>
+              <CardActions>
+                <Button className="btn-hasil" size="large" variant="outlined">
+                  <span style={{ fontSize: "12px" }}>Keluar</span>
+                </Button>
+              </CardActions>
+            </div>
+          </Card>
+        </Grid>
+      </Grid>
     </ThemeProvider>
   );
 }

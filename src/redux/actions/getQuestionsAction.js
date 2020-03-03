@@ -9,6 +9,7 @@ export function getQuestions() {
           type: GET_QUESTIONS,
           payload: data
         })
-      );
+      )
+      .catch(err => console.log(err));
   };
 }

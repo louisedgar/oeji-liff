@@ -6,11 +6,10 @@ import { connect } from "react-redux";
 
 class Hasil extends Component {
   render() {
-    console.log(this.props.score);
     return (
       <CssBaseline>
         <div className="hasil-page">
-          <HasilCard />
+          <HasilCard score={this.props.score} />
         </div>
       </CssBaseline>
     );
@@ -19,7 +18,7 @@ class Hasil extends Component {
 
 const mapStateToProps = state => {
   return {
-    score: state.score
+    score: state.questions.score
   };
 };
 
