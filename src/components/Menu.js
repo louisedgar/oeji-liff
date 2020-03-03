@@ -6,7 +6,10 @@ import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import Timer from "./Timer";
-import ButtonRow from "./ButtonRow";
+// import ButtonRow from "./ButtonRow";
+
+import { Link } from "react-router-dom";
+import DoneIcon from "@material-ui/icons/Done";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -47,7 +50,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function Menu(props) {
+function Menu() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -58,6 +61,7 @@ function Menu(props) {
   const handleClose = () => {
     setOpen(false);
   };
+
   return (
     <div className={classes.root}>
       <Paper elevation={3} className={classes.paper}>
@@ -66,10 +70,14 @@ function Menu(props) {
       <Paper elevation={3} className={classes.paper}>
         <Timer />
       </Paper>
-      <Paper elevation={3} className={classes.paperIcon} onClick={handleOpen}>
-        <ViewList style={{ width: "35", height: "35" }} />
-      </Paper>
-      <Modal
+      <Link to="/hasil">
+        <Paper elevation={3} className={classes.paperIcon} onClick={handleOpen}>
+          <DoneIcon
+            style={{ width: "30px", height: "26px", color: "#fccd04" }}
+          />
+        </Paper>
+      </Link>
+      {/* <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         className={classes.modal}
@@ -91,7 +99,7 @@ function Menu(props) {
             </div>
           </div>
         </Fade>
-      </Modal>
+      </Modal> */}
     </div>
   );
 }

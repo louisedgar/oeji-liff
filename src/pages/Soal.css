@@ -1,12 +1,12 @@
 .soal-page {
   background-image: url("../assets/bg.svg");
-  height: 100vh;
+  height: 135vh;
   background-size: cover;
   font-family: "Roboto", sans-serif;
 }
 
 .section-a {
-  height: 35vh;
+  height: 35%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

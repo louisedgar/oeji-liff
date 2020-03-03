@@ -8,10 +8,6 @@ import LeftArrowSwap from "./LeftArrow";
 import RightArrowSwap from "./RightArrow";
 
 class SoalCard extends Component {
-  state = {
-    activeChoice: ""
-  };
-
   render() {
     return (
       <Card
