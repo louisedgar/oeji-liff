@@ -12,7 +12,8 @@ const initialState = {
     pilihan: []
   },
   score: [],
-  progress: 0
+  progress: 0,
+  isLoading: true
 };
 
 export default function questionsReducer(state = initialState, action) {
@@ -28,7 +29,8 @@ export default function questionsReducer(state = initialState, action) {
           soal: action.payload[0].text,
           pilihan: action.payload[0].choices
         },
-        score: action.payload.map(() => "")
+        score: action.payload.map(() => ""),
+        isLoading: false
       };
     case SET_ACTIVE:
       const active = state.questions.map((question, questionIndex) => {

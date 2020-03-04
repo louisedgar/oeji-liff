@@ -10,8 +10,7 @@ class ButtonRow extends Component {
     }
     return (
       <div>
-        <h1>Submit jawaban?</h1>
-        {/* {buttonRows.map((rows, index) => {
+        {buttonRows.map((rows, index) => {
           return (
             <div
               className="buttonRow"
@@ -47,7 +46,7 @@ class ButtonRow extends Component {
                 })}
             </div>
           );
-        })} */}
+        })}
       </div>
     );
   }

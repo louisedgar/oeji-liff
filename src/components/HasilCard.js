@@ -71,8 +71,8 @@ export default function HasilCard(props) {
               <Typography variant="body2" component="p">
                 {finalScore.length} dari {props.score.length} soal berhasil kamu
                 jawab dengan benar.{" "}
-                {finalScore.length > 3
-                  ? "Tetap belajar dan pertahankan!"
+                {finalScore.length > props.score.length * 0.7
+                  ? "Terus belajar dan pertahankan!"
                   : "Jangan menyerah. Ayo tingkatkan!"}
               </Typography>
             </CardContent>

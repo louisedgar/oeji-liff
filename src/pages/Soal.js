@@ -14,7 +14,6 @@ import { bindActionCreators } from "redux";
 import Loading from "../components/Loading";
 
 class Soal extends Component {
-  _isLoading = true;
   handleChoice = (value, id, index) => {
     this.props.setActive(id, index);
     this.props.setScore(value, id);
@@ -52,7 +51,14 @@ class Soal extends Component {
               <ProgressBar progress={this.props.questions.progress} />
             </div>
           </div>
-          <Carousel>{soalCard}</Carousel>
+
+          {this.props.questions.isLoading ? (
+            <div style={{ margin: "100px 0 0" }}>
+              <Loading style={{ width: "200px", height: "200px" }} />
+            </div>
+          ) : (
+            <Carousel>{soalCard}</Carousel>
+          )}
         </div>
       </CssBaseline>
     );
