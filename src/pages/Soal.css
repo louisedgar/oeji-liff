@@ -1,6 +1,6 @@
 .soal-page {
   background-image: url("../assets/bg.svg");
-  height: 135vh;
+  height: 100vh;
   background-size: cover;
   font-family: "Roboto", sans-serif;
 }

@@ -70,9 +70,9 @@ export default function HasilCard(props) {
               </Typography>
               <Typography variant="body2" component="p">
                 {finalScore.length} dari {props.score.length} soal berhasil kamu
-                jawab dengan benar.{" "}
-                {finalScore.length > 3
-                  ? "Tetap belajar dan pertahankan!"
+                jawab dengan benar. {""}
+                {finalScore.length > props.score.length * 0.7
+                  ? "Terus belajar dan pertahankan!"
                   : "Jangan menyerah. Ayo tingkatkan!"}
               </Typography>
             </CardContent>
@@ -81,10 +81,13 @@ export default function HasilCard(props) {
                 <Button
                   className="btn-hasil"
                   size="large"
-                  variant="outlined"
+                  variant="contained"
                   color="secondary"
+                  disableElevation="true"
                 >
-                  <span style={{ fontSize: "12px" }}>Dashboard</span>
+                  <span style={{ fontSize: "12px", color: "#fff" }}>
+                    Dashboard
+                  </span>
                 </Button>
               </CardActions>
               <CardActions>
