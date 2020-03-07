@@ -7,11 +7,9 @@ import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import Timer from "./Timer";
 import Submit from "./Submit";
-
 import Button from "@material-ui/core/Button";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-
 import { Link } from "react-router-dom";
 import DoneIcon from "@material-ui/icons/Done";
 
@@ -41,7 +39,7 @@ const useStyles = makeStyles(theme => ({
   paper: {
     padding: theme.spacing(2),
     textAlign: "center",
-    fontWeight: "900"
+    fontWeight: "700"
   },
   paperIcon: {
     padding: theme.spacing(1),
@@ -118,12 +116,22 @@ function Menu() {
                 <Submit style={{ width: "300px", heigth: "300px" }} />
               </div>
               <div style={{ textAlign: "center", margin: "40px 0" }}>
-                <Typography variant="body1">
-                  <span style={{ fontWeight: 700 }}>Yakin submit jawaban?</span>
+                <Typography component="h1">
+                  <span
+                    style={{
+                      fontWeight: 700,
+                      fontSize: "16px",
+                      fontFamily: "Roboto, Helvetica, Arial, sans-serif",
+                      letterSpacing: "1px",
+                      lineHheight: 1
+                    }}
+                  >
+                    Yakin submit jawaban?
+                  </span>
                 </Typography>
                 <br />
                 <Typography variant="body2">
-                  Cek kembali jawabanmu dan pastikan sudah mamilih jawaban yang
+                  Cek kembali jawabanmu dan pastikan sudah memilih jawaban yang
                   menurutmu tepat.
                 </Typography>
               </div>
@@ -137,18 +145,20 @@ function Menu() {
               >
                 <Link to="/hasil" style={{ textDecoration: "none" }}>
                   <Button
-                    variant="outlined"
+                    variant="contained"
                     color="primary"
-                    style={{ margin: "10px" }}
+                    style={{ margin: "10px", color: "#fff" }}
+                    disableElevation="true"
                   >
                     Sudah yakin
                   </Button>
                 </Link>
                 <Button
-                  variant="outlined"
+                  variant="contained"
                   color="secondary"
                   style={{ margin: "10px" }}
                   onClick={handleClose}
+                  disableElevation="true"
                 >
                   Belum yakin
                 </Button>

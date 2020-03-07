@@ -17,7 +17,6 @@ class SoalCard extends Component {
           height: "100%",
           overflow: "auto",
           borderRadius: "15px 15px 0 0",
-          fontSize: "12px",
           textAlign: "left,"
         }}
       >
@@ -34,9 +33,7 @@ class SoalCard extends Component {
             </span>
           </Typography>
           <div className="question">
-            <Typography variant="body2" component="p">
-              {this.props.question.text}
-            </Typography>
+            <Typography variant="body2">{this.props.question.text}</Typography>
           </div>
         </CardContent>
         <div className="choice">
